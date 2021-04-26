@@ -16,14 +16,7 @@ class _LoadingState extends State<Loading> {
   }
 
 
-  Future<List<Time>> getRequest() async {
-    //replace your restFull API here.
-    String url = "http://worldtimeapi.org/api/timezone/Europe/London";
-    final response = await http.get(url);
-
-    var responseData = json.decode(response.body);
-
-    //Creating a list to store input data;
+  
 
   //Future<http.Response> fetchAlbum() {
   //return http.get(Uri.https('jsonplaceholder.typicode.com', 'albums/1'));
