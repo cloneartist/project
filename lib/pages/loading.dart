@@ -10,11 +10,12 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void getTime() async {
-    Response response = await get('http://worldtimeapi.org/api/timezone/Europe/London');
+    Response response = await get('http://worldtimeapi.org/api/timezone/Europe/London/$url');
     Map data = jsonDecode(response.body);
     print(data);
   }
-  
+
+
   Future<List<Time>> getRequest() async {
     //replace your restFull API here.
     String url = "http://worldtimeapi.org/api/timezone/Europe/London";
